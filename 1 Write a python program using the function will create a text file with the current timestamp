@@ -1,0 +1,25 @@
+"""
+Name: Kiran G
+Program: Write a python program using function to which will do the following:-
+a. The function will create a text file with the current timestamp.
+b. The file content should have the content of the current timestamp.
+
+"""
+
+import datetime
+
+def create_timestamp_file():
+    # Get the current timestamp
+    current_timestamp = datetime.datetime.now().strftime("%Y-%m-%d %H-%M-%S")
+    
+    # Create a file name with the current timestamp
+    file_name = f"timestamp_{current_timestamp}.txt"
+    
+    # Write the timestamp to the file
+    with open(file_name, 'w') as file:
+        file.write(current_timestamp)
+    
+    print(f"File '{file_name}' created with content: '{current_timestamp}'")
+
+# Call the function
+create_timestamp_file()
